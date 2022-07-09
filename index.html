@@ -1,26 +1,65 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css" />
+
     <title>Landing Page</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <section>
-            <H1>Receba as novidades em tecnologia.</H1>
-        </section>
+      <section>
+        <img src="image/favicon.png" alt="imagem-tecnologia" />
+        <h1>Receba as novidades em tecnologia</h1>
+      </section>
     </header>
 
     <main>
+      <section class="container">
+        <form action="#">
+          <label for="nome">Nome</label>
+          <input type="text" name="name" id="nome" />
 
+          <label for="sobrenome">Sobrenome</label>
+          <input type="text" name="name" id="sobrenome" />
+
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" />
+
+          <label for="celular">Celular</label>
+          <input type="tel" name="tel" id="celular" />
+          
+          <label for="preferencias"> Conteúdos preferidos</label>
+
+          <div class="check">
+              <input type="checkbox" id="nerd" />
+              <label for="nerd">Mundo Nerd</label>
+          </div>
+
+          <div class="check">
+              <input type="checkbox" id="amanha" />
+              <label for="amanha">Tecnologias do Amanhã</label>
+          </div>
+
+          <div class="check">
+              <input type="checkbox" id="meta" />
+              <label for="meta">Metaverso</label>
+          </div>
+
+          <label for="linguagem"
+            >Escreva abaixo as linguagens que você se indentifica</label
+          >
+          <textarea id="linguagem" name="linguagem" cols="10" rows="3" wrap="hard" autocorrect="off"></textarea>
+
+          <input id="botao" type="button" value="Enviar">
+        </form>
+      </section>
     </main>
 
-    <footer>
-
-    </footer>
-    
-</body>
+    <footer></footer>
+  </body>
 </html>
