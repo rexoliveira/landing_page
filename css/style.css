@@ -16,239 +16,207 @@
     --cor5: #71a2f734;
 }
 
-body {
+html, body {
+    transition: all 0.5s ease;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: var(--cor4);
     font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--cor1);
 }
 
-
-
-header section {
-    width: 100vw;
-    height: 150px;
+header {
+    transition: all 0.5s ease;
     display: flex;
+    justify-content: center;
     align-items: center;
-    background-color: var(--cor1);
+    background-image: linear-gradient(to bottom, var(--cor3), var(--cor1) 90%);
+    min-height: 150px;
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
 
-img {
+header>h1 {
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor4);
+    font-family: var(--fonte1);
+    font-size: 3em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.418);
+}
+
+header img {
+    transition: all 0.5s ease;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100px;
-    height: 100px;
-    padding: 10px;
-}
-
-h1 {
-    color: var(--cor3);
-    font-size: 3em;
-    text-align: center;
     padding: 10px;
 }
 
 main {
-    display: flex;
-    flex-wrap: wrap;
-    float: right;
+    transition: all 0.5s ease;
+    /* Largura minima */
+    min-width: 300px;
+    /* Largura máxima */
+    max-width: 800px;
+    height: 85vh;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
     background-color: var(--cor1);
-}
-
-
-.container {
-    width: 300px;
-    background-color: var(--cor2);
-    border-radius: 10px;
-    padding: 25px;
-    align-items: center;
-    margin-right: 50px;
+    background-image: url('../image/fundo-abstrato-azul.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
 }
 
 form {
-    font-family: var(--fonte1);
-    font-size: 1.3em;
-    color: var(--cor4);
+    transition: all 0.5s ease;
+    float: right;
+    width: 45%;
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: var(--cor3);
+    border-radius: 5px;
 }
 
-form>input {
-    width: 250px;
-    height: 25px;
-    margin-bottom: 10px;
+label {
+    align-items: center;
+    color: lightgray;
+    padding-top: 10px;
+}
+
+div label {
+    display: flex;
+    align-content: center;
+    color: lightgray;
+    padding-top: 0px;
+}
+
+input {
+    height: 20px;
     border: none;
     border-radius: 5px;
+    
+
 }
 
-.check {
-    width: 250px;
-    background-color: var(--cor5);
-    margin-bottom: 10px;
-    border-radius: 5px;
+input:focus, textarea:focus {
+    background-color: #2773F5;
+    margin-top: 0px;
+    padding: 10px;
+    color: white;
 
+
+}
+
+div.check {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    margin-top: 5px;
+    padding: 1px;
 }
 
 textarea {
-    column-width: 10;
-    width: 250px;
     resize: none;
     margin-bottom: 10px;
     border: none;
     border-radius: 5px;
-
 }
 
 #botao {
-    font-family: var(--fonte1);
-    align-items: center;
-    color: var(--cor2);
-    font-size: 1em;
-    background-color: #2773F5;
-    height: 30px;
-    width: 250px;
-    border-radius: 5px;
+    margin-top: 0px;
+    padding: 0px;
+    color: var(--cor4);
+    font-size: 15px;
+    font-weight: 600;
+    background-color: var(--cor1);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
     cursor: pointer;
-    border: none;
 }
 
-@media only screen and (max-width:640px) {
-    h1 {
-        font-size: 2.5em;
-    }
+#botao:hover {
+    /* hover passar o mouse por cima */
+    box-shadow: 0 0 8px 0 var(--cor4) inset, 0 0 2px 2px var(--cor3);
+    color: var(--cor2);
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width: 1000px) {
     main {
-        float: none;
-        justify-content: center;
-        align-items: center;
-    }
-
-    header section {
-        width: 100vw;
-        height: 100px;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        background-color: var(--cor1);
-        padding: 15%;
-    }
-
-    form>label {
-        margin-left: 5px;
-    }
-
-    form>div>label {
-        font-size: 0.9em;
-    }
-
-    h1 {
-        width: 150px;
-        display: flex;
-        margin: 0;
-        text-align: start;
-        font-size: 1.2em;
+        transition: all 0.5s ease;
+        /* Largura minima */
+        min-width: 150px;
+        /* Largura máxima */
+        max-width: 400px;
+        height: 85vh;
+        margin: auto;
+        margin-bottom: 15px;
+        padding: 10px;
 
     }
 
-    img {
-        width: 50px;
-        height: 50px;
-        padding: 5px;
-    }
-
-    .container {
-        width: 200px;
+    header {
+        transition: all 0.5s ease;
+        min-height: 100px;
+        text-align: center;
+        padding: 0px;
         margin: 0px;
     }
 
-    #botao {
-        font-size: 1.0em;
-        width: 150px;
+    header img {
+        transition: all 0.5s ease;
+        width: 70px;
+        padding: 10px;
     }
 
-    form>input {
-        width: 150px;
-        margin: 5px;
-    }
-
-    .check {
-        width: 155px;
-
-    }
-
-    textarea {
-        width: 150px;
-        margin: 5px;
+    header>h1 {
+        transition: all 0.5s ease;
+        font-size: 2em;
 
     }
 
     form {
-        font-size: 1.0em;
-    }
+        transition: all 0.5s ease;
+        float: none;
+        width: 100%;
 
+    }
 }
 
-@media only screen and (max-width:259px) {
-    html {
-        margin: 0;
-        justify-items: center;
-        align-items: center;
-    }
-
-    body {
-        align-items: center;
-        margin: 0;
-        width: 180px;
-        padding: 0;
-
-    }
-
+@media only screen and (max-width: 450px) {
     main {
-        display: block;
-        justify-items: center;
-        align-items: center;
-        width: 180px;
-        padding: 0;
-        margin: 0;
+        transition: all 0.5s ease;
+        /* Largura minima */
+        min-width: 75px;
+        /* Largura máxima */
+        max-width: 200px;
+        height: 85vh;
+        margin: auto;
+        margin-bottom: 15px;
+        padding: 10px;
+
     }
 
-    header section {
-        width: 170px;
-        height: 80px;
-        display: flex;
-        justify-items: center;
-        background-color: var(--cor1);
-        padding: 0%;
-        margin: 0px;
-    }
+    header>h1 {
+        transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        font-size: 1.4em;
 
-    .container {
-        width: 170px;
-        background-color: var(--cor2);
-        border-radius: 10px;
-        padding: 5px;
-        align-items: center;
-        margin: 5px;
     }
-
-    h1 {
-        width: 200px;
-        height: 80px;
-        justify-items: center;
-        text-align: center;
-        font-size: 1.2em;
-        padding: 0%;
-        margin: 5px;
-    }
-
-    img {
-        display: none;
-    }
-
-    #botao {
-        height: 20px;
-    }
-
 }
