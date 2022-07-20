@@ -8,56 +8,72 @@
     <link rel="shortcut icon" href="image/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <script src="/scripts/mascaras.js"></script>
+
     <title>Landing Page</title>
   </head>
   <body>
     <header>
-      
-        <img src="image/favicon.png" alt="imagem-tecnologia" />
-        <h1>Receba as novidades em tecnologia</h1>
-      
+      <img src="image/favicon.png" alt="imagem-tecnologia" />
+      <h1>Receba as novidades em tecnologia</h1>
     </header>
 
     <main>
-  
-        <form action="cadastro-landing-p" method="post">
-          <label for="nome">Nome</label>
-          <input type="text" name="name" id="nome" />
+      <form action="cadastro-landing-p" method="post">
+        <label for="nome">Nome</label>
+        <input type="text" name="name" id="nome" required minlength="4" maxlength="20"/>
 
-          <label for="sobrenome">Sobrenome</label>
-          <input type="text" name="name" id="sobrenome" />
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="name" id="sobrenome" required minlength="4" maxlength="40" />
 
-          <label for="email">E-mail</label>
-          <input type="email" name="email" id="email" />
+        <label for="email">E-mail</label>
+        <input type="email" name="email" id="email" required/>
 
-          <label for="celular">Celular</label>
-          <input type="tel" name="tel" id="celular" />
+        <label for="telefone">Celular</label>
+        <!-- Não permite letras//Permite formatação padrão -->
+        <input
+          type="text"
+          id="telefone"
+          name="telefone"
+          onkeypress="mask(this, mphone);"
+          onblur="mask(this, mphone);"
+          th:value="${usuario.telefone}"
+          placeholder="(00) 00000-0000"
+          required
           
-          <label for="preferencias"> Conteúdos preferidos</label>
+        />
 
-          <div class="check">
-              <input type="checkbox" id="nerd" />
-              <label for="nerd">Mundo Nerd</label>
-          </div>
+        <label for="preferencias"> Conteúdos preferidos</label>
 
-          <div class="check">
-              <input type="checkbox" id="amanha" />
-              <label for="amanha">Tecnologias do Amanhã</label>
-          </div>
+        <div class="check">
+          <input type="checkbox" id="nerd" />
+          <label for="nerd">Mundo Nerd</label>
+        </div>
 
-          <div class="check">
-              <input type="checkbox" id="meta" />
-              <label for="meta">Metaverso</label>
-          </div>
+        <div class="check">
+          <input type="checkbox" id="amanha" />
+          <label for="amanha">Tecnologias do Amanhã</label>
+        </div>
 
-          <label for="linguagem"
-            >Escreva abaixo as linguagens que você se indentifica</label
-          >
-          <textarea id="linguagem" name="linguagem" cols="10" rows="3" wrap="hard" autocorrect="off"></textarea>
+        <div class="check">
+          <input type="checkbox" id="meta" />
+          <label for="meta">Metaverso</label>
+        </div>
 
-          <input id="botao" type="submit" name="button" value="Enviar">
-        </form>
-      
+        <label for="linguagem"
+          >Escreva abaixo as linguagens que você se indentifica</label
+        >
+        <textarea
+          id="linguagem"
+          name="linguagem"
+          cols="10"
+          rows="3"
+          wrap="hard"
+          autocorrect="off"
+        ></textarea>
+
+        <input id="botao" type="submit" name="button" value="Enviar" />
+      </form>
     </main>
 
     <footer></footer>
